@@ -5,7 +5,7 @@ const listBox = document.getElementById('taskList');
 function addTask() {
     if(inputBox.value === '')
     {
-        alert("no task");
+        alert("Text box is empty");
     }
     else
     {
