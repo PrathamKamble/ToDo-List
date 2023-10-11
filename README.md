@@ -15,4 +15,4 @@ Download this repo and run in `VScode` with extension `Live Server`  and you are
 
 #### `Final Output`
 
-![Start](./images/snapshot.png)
+![Start](./images/screenshot.png)
