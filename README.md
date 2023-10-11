@@ -6,7 +6,7 @@ In this, you can easily add tasks, delete them, and mark them as complete, strea
 ## Features
 User can add, delete and mark task as complete.
 
-Data remains accessible even if you refresh the page as its stores on localstorage.
+Data remains accessible even if you close or refresh the page.
 
 User-friendly and minimal design.
 
