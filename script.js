@@ -5,30 +5,34 @@ const listBox = document.getElementById('taskList');
 function addTask() {
     if(inputBox.value === '')
     {
-        alert("Text box is empty");
+        window.alert("Text box is empty !! before clicking 'Add' enter your task 👍");
     }
     else
     {
         let li = document.createElement("li");
         li.innerHTML = inputBox.value;
         listBox.appendChild(li);
-        let span = document.createElement("span");
-        span.innerHTML = "\u00d7";
-        li.appendChild(span);
+        
+        let icon = document.createElement("i");
+        if(icon)
+        {
+            icon.classList.add("fa-regular", "fa-trash-can", "icon")
+        }
+        li.appendChild(icon);
     }
     inputBox.value = "";
     saveData();
 }
 
 // select and remove event
-listBox.addEventListener("click", (e) => {
-    if(e.target.tagName === "LI"){
-        e.target.classList.toggle("checked");
+listBox.addEventListener("click", (event) => {
+    if(event.target.tagName === "LI"){
+        event.target.classList.toggle("checked");
         saveData();
     }
-    else if(e.target.tagName === "SPAN")
+    else if(event.target.tagName === "I")
     {
-        e.target.parentElement.remove();
+        event.target.parentElement.remove();
         saveData();
     }
 }, false);
